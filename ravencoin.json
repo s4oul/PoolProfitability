@@ -1,0 +1,11 @@
+{
+  "coin": "RVN",
+  "block_reward": 2500,
+  "block_by_day": 1440,
+  "network_difficulty": 150e3,
+  "network_hash_rate": 9.87e12,
+  "pool_hash_rate": 9.790e9,
+  "fees_percent": 1,
+  "euros": 0.0296,
+  "euros_expected": 1000
+}

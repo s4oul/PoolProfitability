@@ -1,0 +1,11 @@
+{
+  "coin": "FLUX",
+  "block_reward": 18.75,
+  "block_by_day": 707,
+  "network_difficulty": 275.90e3,
+  "network_hash_rate": 4.64e6,
+  "pool_hash_rate": 62.239e3,
+  "fees_percent": 1,
+  "euros": 0.84,
+  "euros_expected": 1000
+}

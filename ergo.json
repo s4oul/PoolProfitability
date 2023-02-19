@@ -1,0 +1,11 @@
+{
+  "coin": "ERG",
+  "block_reward": 42,
+  "block_by_day": 724,
+  "network_difficulty": 3.63e15,
+  "network_hash_rate": 31.79e12,
+  "pool_hash_rate": 33.618e9,
+  "fees_percent": 1,
+  "euros": 1.61,
+  "euros_expected": 1000
+}
