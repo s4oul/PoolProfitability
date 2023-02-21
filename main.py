@@ -3,7 +3,7 @@ import json
 
 def to_hashrate(hashrate: int) -> str:
     index = 0
-    units = ['H/S', 'KH/S', 'MH/S', 'GH/S', 'TH/S', 'PH/S']
+    units = ['H/S', 'KH/S', 'MH/S', 'GH/S', 'TH/S', 'PH/S', 'EH/S']
     while hashrate > 1000:
         hashrate /= 1000
         index += 1
@@ -57,12 +57,13 @@ class CoinSetting:
     def compute(self):
         self.pool_percent = (self.pool_hash_rate * 100) / self.network_hash_rate
         self.pool_block = (self.pool_percent * self.block_by_day) / 100
-        self.pool_reward_by_day = ((self.block_by_day * self.block_reward) * self.pool_percent) / 100
+        self.pool_reward_by_day = self.pool_block * self.block_reward
         self.pool_euros_by_day = self.pool_reward_by_day * self.euros
+
         self.fees_reward_by_day = (self.pool_reward_by_day * self.fees_percent) / 100
         self.fees_euros_by_day = self.fees_reward_by_day * self.euros
 
-        euros_by_month = self.fees_euros_by_day * 31 * self.euros
+        euros_by_month = self.fees_euros_by_day * 31
         factor_euros = self.fees_euros_expected / euros_by_month
         self.pool_hash_rate_expected = self.pool_hash_rate * factor_euros
 
@@ -74,4 +75,10 @@ def load_projet(files: list):
         print(p)
 
 
-load_projet(['ravencoin.json', 'ergo.json', 'flux.json'])
+coin_project = [
+    'ravencoin.json',
+    'ergo.json',
+    'flux.json',
+    'btc.json'
+]
+load_projet(coin_project)

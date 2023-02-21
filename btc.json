@@ -1,0 +1,11 @@
+{
+  "coin": "BTC",
+  "block_reward": 6.25,
+  "block_by_day": 144,
+  "network_difficulty": 39.16e12,
+  "network_hash_rate": 310.40e18,
+  "pool_hash_rate": 38.668e15,
+  "fees_percent": 2,
+  "euros": 23151,
+  "euros_expected": 100000
+}
